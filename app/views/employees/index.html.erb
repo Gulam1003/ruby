@@ -1,0 +1,25 @@
+<h1>Employees</h1>
+<%= flash[:notice] %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.name %></td>
+        <td><%= employee.age %></td>
+        <td><%= employee.department %></td>
+        <td><%= employee.position %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Employee', new_employee_path %>
